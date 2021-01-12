@@ -1,5 +1,5 @@
 #! /bin/bash
-printf "Installing RDP, this may take a few minutes.. " >&2
+printf "Installing required packages, this may take a few minutes.. " >&2
 {
 sudo useradd -m REMOTE
 sudo adduser REMOTE sudo
@@ -23,10 +23,10 @@ printf "\nSetup Complete " >&2 || printf "\nError Occured " >&2
 printf '\nGo to https://remotedesktop.google.com/headless and copy the Debian Linux command.\n'
 read -p "Paste the copied command Here: " CRP
 su - REMOTE -c """$CRP"""
-printf 'Go to https://remotedesktop.google.com/access/ and connect to the VM instance. \n\n'
+printf 'Go to https://remotedesktop.google.com/access/ and connect to the VM instance. \n\n Upgrading currenct packages to their latest versions..'
 if sudo apt-get upgrade &> /dev/null
 then
-    printf "\n\nUpgrade Completed." >&2
+    printf "\n\nUpgrade Complete." >&2
 else
     printf "\n\nError Occured." >&2
 fi
