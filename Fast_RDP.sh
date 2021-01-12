@@ -15,6 +15,7 @@ sudo bash -c 'echo "exec /etc/X11/Xsession /usr/bin/xfce4-session" > /etc/chrome
 sudo apt install --assume-yes xscreensaver
 sudo systemctl disable lightdm.service
 sudo apt-get install firefox
+sudo apt-get install qbittorrent
 sudo apt install nautilus nano -y 
 sudo adduser REMOTE chrome-remote-desktop
 } &> /dev/null &&
