@@ -18,7 +18,6 @@ sudo apt-get install firefox
 sudo apt-get install qbittorrent
 sudo apt install nautilus nano -y 
 sudo adduser REMOTE chrome-remote-desktop
-sudo service chrome-remote-desktop start
 } &> /dev/null &&
 printf "\nSetup Complete " >&2 || printf "\nError Occured " >&2
 printf '\nGo to https://remotedesktop.google.com/headless and copy the Debian Linux command.\n'
@@ -26,8 +25,10 @@ read -p "Paste the copied command Here: " CRP
 su - REMOTE -c """$CRP"""
 printf 'Go to https://remotedesktop.google.com/access/ and connect to the VM instance. \n\n Upgrading currenct packages to their latest versions..'
 if sudo apt-get upgrade &> /dev/null
-then
+then {
+    sudo service chrome-remote-desktop start
     printf "\n\nUpgrade Complete." >&2
+}
 else
     printf "\n\nError Occured." >&2
 fi
