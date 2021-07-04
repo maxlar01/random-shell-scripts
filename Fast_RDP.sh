@@ -18,6 +18,7 @@ sudo apt-get install firefox
 sudo apt-get install qbittorrent
 sudo apt install nautilus nano -y 
 sudo adduser REMOTE chrome-remote-desktop
+sudo service chrome-remote-desktop start
 } &> /dev/null &&
 printf "\nSetup Complete " >&2 || printf "\nError Occured " >&2
 printf '\nGo to https://remotedesktop.google.com/headless and copy the Debian Linux command.\n'
