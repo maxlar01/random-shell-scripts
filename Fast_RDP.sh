@@ -27,7 +27,7 @@ su - REMOTE -c """$CRP"""
 printf 'Go to https://remotedesktop.google.com/access/ and connect to the VM instance. \n\n Upgrading currenct packages to their latest versions..'
 if sudo apt-get upgrade &> /dev/null
 then {
-    sudo service chrome-remote-desktop start
+    sudo service chrome-remote-desktop start &> /dev/null
     printf "\n\nUpgrade Complete." >&2
 }
 else
