@@ -17,7 +17,7 @@ sudo systemctl disable lightdm.service
 sudo apt-get install firefox
 sudo apt-get install qbittorrent
 sudo apt-get install terminator
-sudo apt-get install rclone
+curl https://rclone.org/install.sh | sudo bash
 sudo apt-get install -y leafpad
 sudo apt install nautilus nano -y 
 sudo adduser REMOTE chrome-remote-desktop
